@@ -46,7 +46,7 @@ body {
     color: $maincolor;
 
     &::before {
-      content: url("/img/icons/check.png");
+      content: url("../img/icons/check.png");
       display: inline-block;
       position: absolute;
 
@@ -82,7 +82,7 @@ body {
   li:nth-child(2):hover {
     color: #d55a5a;
     font-weight: 400;
-    background: url("/img/icons/check_icon.png") left no-repeat;
+    background: url("../img/icons/check_icon.png") left no-repeat;
   }
   li:nth-child(2):hover::before {
     content: none;
@@ -116,7 +116,7 @@ body {
     padding-right: 30px;
   }
   span:after {
-    content: url(/img/icons/arrow.svg);
+    content: url(../img/icons/arrow.svg);
     position: absolute;
     left: 153px;
     top: 5%;
