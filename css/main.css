@@ -131,7 +131,7 @@ body {
 }
 
 .container-bottom-info__list li::before {
-  content: url("/img/icons/check.png");
+  content: url("../img/icons/check.png");
   display: inline-block;
   position: absolute;
   left: 0;
@@ -168,7 +168,7 @@ body {
 .container-bottom-info__list li:nth-child(2):hover {
   color: #d55a5a;
   font-weight: 400;
-  background: url("/img/icons/check_icon.png") left no-repeat;
+  background: url("../img/icons/check_icon.png") left no-repeat;
 }
 
 .container-bottom-info__list li:nth-child(2):hover::before {
@@ -206,7 +206,7 @@ body {
 }
 
 .container-bottom-info__link span:after {
-  content: url(/img/icons/arrow.svg);
+  content: url(../img/icons/arrow.svg);
   position: absolute;
   left: 153px;
   top: 5%;
