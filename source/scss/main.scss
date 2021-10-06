@@ -1,0 +1,175 @@
+// обнуляющие стили
+@import "_nullstyle";
+
+// Шрифт Arial==============
+%ffarial {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+// Общий цвет текста
+$maincolor: #273d46;
+
+body {
+  background: #e8e8e8;
+}
+
+.container {
+  max-width: 841px;
+  margin: 0 auto;
+  padding: 168px 0 137px 0;
+}
+
+.heading {
+  @extend %ffarial;
+  color: $maincolor;
+  font-weight: 700;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 30px;
+  padding: 0 45px;
+}
+
+.container__bottom {
+  padding: 0 45px;
+}
+/* Стилизация списка ========== */
+.container-bottom-info__list {
+  position: relative;
+  margin-bottom: 59px;
+
+  li {
+    @extend %ffarial;
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-left: 35px;
+    color: $maincolor;
+
+    &::before {
+      content: url("/img/icons/check.png");
+      display: inline-block;
+      position: absolute;
+
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-repeat: no-repeat;
+    }
+  }
+  li:last-child {
+    margin: 0;
+  }
+  li:nth-child(1) {
+    text-decoration: line-through;
+  }
+  li:nth-child(2) {
+    font-weight: 700;
+  }
+  li:nth-child(3) {
+    font-style: italic;
+  }
+  li:nth-child(4) {
+    text-transform: uppercase;
+  }
+}
+
+/*Стилизация списка при наведении ==========*/
+
+.container-bottom-info__list {
+  li:first-child:hover {
+    text-decoration: none;
+  }
+  li:nth-child(2):hover {
+    color: #d55a5a;
+    font-weight: 400;
+    background: url("/img/icons/check_icon.png") left no-repeat;
+  }
+  li:nth-child(2):hover::before {
+    content: none;
+  }
+  li:nth-child(3):hover {
+    font-style: normal;
+  }
+  li:last-child:hover {
+    text-transform: none;
+  }
+}
+
+/* Стилизация кнопки ========== */
+.container-bottom-info__link {
+  @extend %ffarial;
+  height: 44px;
+  display: inline-block;
+  line-height: 44px;
+  padding: 0 30px;
+  border-radius: 24px;
+  background-color: #4cb8b0;
+  color: #fff;
+  -webkit-box-shadow: 2px 4px 20px 6px rgba(174, 212, 210, 1);
+  box-shadow: 2px 4px 20px 6px rgba(174, 212, 210, 1);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2.8px;
+  margin-bottom: 100px;
+  position: relative;
+  span {
+    padding-right: 30px;
+  }
+  span:after {
+    content: url(/img/icons/arrow.svg);
+    position: absolute;
+    left: 153px;
+    top: 5%;
+    display: inline-block;
+  }
+  // Стилизация кнопки при наведении ==========
+  &:hover {
+    background-color: #3a5856;
+    -webkit-box-shadow: 2px 4px 20px 6px rgba(58, 88, 86, 0.3);
+    box-shadow: 2px 4px 20px 6px rgba(58, 88, 86, 0.3);
+  }
+  &:active {
+    position: relative;
+    top: 3px;
+    background-color: #818181;
+    box-shadow: none;
+  }
+}
+
+/*Стилизация формы ===================*/
+.bottom__info-text {
+  height: 50px;
+  width: 290px;
+  border: 1px solid #b0b0b0;
+  padding-left: 20px;
+
+  &:focus {
+    border: 1px solid #7fbed5;
+    -webkit-box-shadow: 1px 1px 15px 7px rgba(174, 212, 210, 1);
+    box-shadow: 1px 1px 15px 7px rgba(174, 212, 210, 1);
+  }
+}
+.bottom__info {
+  margin-bottom: 50px;
+}
+
+/* стили абзацев ================ */
+.bottom__info-suptitle {
+  p {
+    @extend %ffarial;
+    font-size: 16px;
+    line-height: 26px;
+    padding-left: 45px;
+    margin-bottom: 30px;
+  }
+}
+
+.bottom__info-suptitle-first::first-line {
+  color: #6303b1;
+  font-weight: 700;
+}
+.bottom__info-suptitle-second::first-letter {
+  color: #e00000;
+  font-size: 27px;
+  font-weight: 700;
+}
